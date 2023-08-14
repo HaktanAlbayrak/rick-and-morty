@@ -4,7 +4,7 @@ import RickTextLogo from './assets/images/rick-and-morty-text.svg';
 function App() {
   return (
     <>
-      <h1>Rick and Morty</h1>
+      <h1 className='text-3xl font-bold underline m-5'>Rick and Morty</h1>
       <img src={RickLogo} alt='logo' width='500px' height='500px' />
       <img src={RickTextLogo} alt='logo' width='500px' height='500px' />
     </>
