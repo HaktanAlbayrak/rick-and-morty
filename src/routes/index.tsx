@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import WebLayout from '~/layouts/web';
 import Characters from '~/pages/characters';
 import Episodes from '~/pages/episodes';
+import NotFound from '~/pages/error';
 import Home from '~/pages/home';
 import Locations from '~/pages/locations';
 
@@ -27,6 +28,10 @@ const routes = createBrowserRouter([
         element: <Episodes />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
 

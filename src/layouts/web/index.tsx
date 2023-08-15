@@ -5,7 +5,7 @@ export default function WebLayout() {
   return (
     <>
       <ScrollRestoration />
-      <main>
+      <main className='flex flex-col gap-10'>
         <Header />
         <Outlet />
       </main>
