@@ -3,11 +3,30 @@ import { GitHub, Storage } from '@mui/icons-material';
 
 export default function Home() {
   return (
-    <Container maxWidth='xl' sx={{ marginTop: '8rem' }}>
+    <Container maxWidth='xl' sx={{ marginTop: { xs: '1rem', lg: "'8rem'" } }}>
       <Grid container spacing={2}>
         <Grid
           item
-          xs={4}
+          xs={12}
+          sx={{
+            display: { xs: 'flex', lg: 'none' },
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '0.75rem',
+          }}
+        >
+          <Typography variant='h4' className='text-active'>
+            Rick and Morty
+          </Typography>
+          <Typography variant='h5' className='text-active'>
+            Guide
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          lg={4}
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -24,17 +43,7 @@ export default function Home() {
             href='https://github.com/HaktanAlbayrak/rick-and-morty'
             target='_blank'
           >
-            <Button
-              variant='outlined'
-              sx={{
-                width: '10rem',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              startIcon={<GitHub />}
-              color='success'
-            >
+            <Button variant='outlined' startIcon={<GitHub />} color='success'>
               Github
             </Button>
           </a>
@@ -43,7 +52,7 @@ export default function Home() {
           item
           xs={4}
           sx={{
-            display: 'flex',
+            display: { xs: 'none', lg: 'flex' },
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
@@ -59,7 +68,8 @@ export default function Home() {
         </Grid>
         <Grid
           item
-          xs={4}
+          xs={12}
+          lg={4}
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -73,17 +83,7 @@ export default function Home() {
             className='w-52 h-52 mb-3'
           />
           <a href='https://rickandmortyapi.com/' target='_blank'>
-            <Button
-              variant='outlined'
-              sx={{
-                width: '10rem',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              startIcon={<Storage />}
-              color='success'
-            >
+            <Button variant='outlined' startIcon={<Storage />} color='success'>
               API Service
             </Button>
           </a>
