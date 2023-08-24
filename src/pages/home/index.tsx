@@ -1,9 +1,11 @@
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { GitHub, Storage } from '@mui/icons-material';
+import Section from '~/components/section';
+import { HomeTitle } from './components/title';
 
 export default function Home() {
   return (
-    <Container maxWidth='xl' sx={{ marginTop: { xs: '1rem', lg: "'8rem'" } }}>
+    <Section>
       <Grid container spacing={2}>
         <Grid
           item
@@ -16,16 +18,12 @@ export default function Home() {
             gap: '0.75rem',
           }}
         >
-          <Typography variant='h4' className='text-active'>
-            Rick and Morty
-          </Typography>
-          <Typography variant='h5' className='text-active'>
-            Guide
-          </Typography>
+          <HomeTitle breakpoint='mobile' />
         </Grid>
         <Grid
           item
           xs={12}
+          md={6}
           lg={4}
           sx={{
             display: 'flex',
@@ -59,16 +57,12 @@ export default function Home() {
             gap: '0.75rem',
           }}
         >
-          <Typography variant='h3' className='text-active'>
-            Rick and Morty
-          </Typography>
-          <Typography variant='h4' className='text-active'>
-            Guide
-          </Typography>
+          <HomeTitle breakpoint='desktop' />
         </Grid>
         <Grid
           item
           xs={12}
+          md={6}
           lg={4}
           sx={{
             display: 'flex',
@@ -89,6 +83,6 @@ export default function Home() {
           </a>
         </Grid>
       </Grid>
-    </Container>
+    </Section>
   );
 }
